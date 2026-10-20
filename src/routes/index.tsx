@@ -34,13 +34,19 @@ const posts = [
 
 const expertise = [
   ["Microsoft HoF", "Recognized for responsibly disclosing critical vulnerabilities in Microsoft's cloud & identity infrastructure"],
-  ["GitHub Security", "Listed in GitHub's Security Hall of Fame for responsible disclosure in core platform features"],
+  ["Google Hall of Fame", "Critical vulnerabilities found and reported to Google, recognised in their security acknowledgements"],
   ["OWASP Standards", "All assessments follow OWASP Testing Guide v4.2 and Top 10 methodology across every engagement"],
-  ["CREST Certified", "Internationally recognised penetration testing standards, ethics, and professional conduct"],
   ["CVE Programme", "Active CVE contributors — we find, report, and help patch real vulnerabilities in widely-used software"],
   ["Bug Bounty Elite", "Top-ranked researchers across HackerOne, Bugcrowd and Intigriti with critical-severity findings"],
   ["Open Source Trust", "Trusted by maintainers of widely-used npm, PyPI, and Go packages to audit before major releases"],
-  ["OpenSSF Supply Chain SIG", "Contributing members of the Open Source Security Foundation's Supply Chain Security working group"],
+  ["AI Agent Security", "Vulnerabilities found in AI coding agents — the same class of tool we now secure"],
+  ["NASA & Government", "Secured NASA systems and government infrastructure, with official acknowledgement for critical findings"],
+];
+
+const oss = [
+  ["Audit before release", "Maintainers send us their packages ahead of a major release. We read the build, the dependency tree and the publish pipeline — not just the source."],
+  ["Publish the scanner free", "Shrike is open source. Anyone can run it on their own org, read the rules, and check exactly what we would flag."],
+  ["Disclose, never exploit", "Findings go to the maintainer first, with a fix in hand. Write-ups come after a patch ships, never before."],
 ];
 
 const principles = [
@@ -254,6 +260,30 @@ function Index() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* How we secure the open source */}
+      <section className="border-b border-border bg-paper">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sonic">
+            / How we secure the open source
+          </p>
+          <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+            {oss.map(([t, d], i) => (
+              <div
+                key={t}
+                className="reveal bg-paper p-7"
+                style={{ animationDelay: `${i * 70}ms` }}
+              >
+                <h3 className="font-display text-xl font-extrabold tracking-tight">{t}</h3>
+                <p className="mt-3 leading-relaxed text-muted-foreground">{d}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-8 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+            npm · PyPI · Go modules · GitHub Actions · AI coding agents
+          </p>
         </div>
       </section>
 
