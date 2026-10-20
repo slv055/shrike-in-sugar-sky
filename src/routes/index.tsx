@@ -185,14 +185,15 @@ function Index() {
               outsider can attack — ranked by Severity, Triggerability and Impact. No noise.
             </p>
             <pre className="mt-8 overflow-x-auto rounded-sm bg-ink p-4 font-mono text-sm text-sea">
-              <span className="text-tomato">$</span> shrike scan --org your-org
+              <span className="text-tomato">$</span> curl -fsSL https://chelate.tech/install.sh | bash{"\n"}
+              <span className="text-tomato">$</span> shrike scan --github-org your-org
             </pre>
           </article>
           <article className="relative overflow-hidden bg-paper p-10">
             <div className="halftone pointer-events-none absolute -bottom-10 -right-10 h-56 w-56 rounded-full text-tomato opacity-40" />
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-tomato">Paid platform</p>
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">Enterprise</p>
             <h3 className="mt-4 font-display text-6xl font-black tracking-tighter">Titra</h3>
-            <p className="mt-2 font-mono text-sm text-muted-foreground">watch and stop it</p>
+            <p className="mt-3 inline-block rounded-sm border-2 border-sonic px-2.5 py-1 font-mono text-sm font-bold text-sonic">watch and stop it</p>
             <p className="mt-8 max-w-md text-lg leading-relaxed">
               Install the GitHub App, add one line to your workflow. Titra records every action
               your agent takes and blocks the dangerous ones — in real time.
@@ -274,7 +275,7 @@ function Index() {
           </h2>
           <p className="mt-6 max-w-xl text-xl">We make sure it only does its job.</p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href="https://www.chelate.tech/" className="rounded-sm bg-ink px-6 py-3 font-mono text-sm uppercase tracking-widest text-paper hover:opacity-90">
+            <a href="https://github.com/ChelateSec/shrike" className="rounded-sm bg-ink px-6 py-3 font-mono text-sm uppercase tracking-widest text-paper hover:opacity-90">
               Scan with Shrike
             </a>
             <a href="https://www.chelate.tech/" className="rounded-sm border border-ink px-6 py-3 font-mono text-sm uppercase tracking-widest hover:bg-ink hover:text-paper">
@@ -284,15 +285,17 @@ function Index() {
         </div>
       </section>
 
-      <footer className="overflow-hidden bg-ink pt-16 text-sea">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs uppercase tracking-widest">
+      <footer className="relative overflow-hidden bg-ink pt-16 text-sea">
+        <ChelateMark className="pointer-events-none absolute -left-8 top-24 h-40 w-40 text-sea opacity-20" />
+        <ChelateMark className="pointer-events-none absolute right-10 top-8 h-24 w-24 rotate-12 text-tomato opacity-25" />
+        <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs uppercase tracking-widest">
           <span className="flex items-center gap-2 text-paper">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </span>
-          <span>© 2026 Chelate · Securing the agentic CI/CD</span>
+          <span>© 2026 Chelate · Securing the Agentic Workflows</span>
         </div>
-        <p className="reveal mt-10 select-none whitespace-nowrap text-center font-display text-[16vw] font-black leading-[0.85] pb-6 tracking-tighter text-paper">
-          Chelate<span className="text-tomato">Sec</span>
+        <p className="reveal relative mt-10 select-none whitespace-nowrap text-center font-display text-[16vw] font-black leading-[0.85] pb-6 tracking-tighter text-paper">
+          Chelate{" "}<span className="text-sea">Sec</span>
         </p>
       </footer>
     </div>
