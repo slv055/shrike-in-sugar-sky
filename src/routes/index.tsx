@@ -75,7 +75,7 @@ function Index() {
         <img
           src={shrike}
           alt="Halftone shrike perched on a branch"
-          className="absolute inset-0 -z-10 h-full w-full object-cover object-[20%_center] md:object-left"
+          className="drift absolute inset-0 -z-10 h-full w-full object-cover object-[20%_center] md:object-left"
         />
         <div className="mx-auto grid min-h-[100svh] max-w-7xl grid-rows-[1fr_auto] px-6 pb-12 pt-32">
           <div className="flex flex-col items-end text-right">
@@ -87,7 +87,7 @@ function Index() {
             </p>
           </div>
           <div className="grid gap-10 md:grid-cols-12 md:items-end">
-            <h1 className="font-display text-[clamp(3.2rem,9vw,8.5rem)] font-black leading-[0.86] tracking-tighter md:col-span-8 md:col-start-5 md:text-right">
+            <h1 className="reveal font-display text-[clamp(3.2rem,9vw,8.5rem)] font-black leading-[0.86] tracking-tighter md:col-span-8 md:col-start-5 md:text-right">
               Securing the
               <br />
               <span className="text-tomato">agentic</span> CI/CD.
@@ -126,7 +126,7 @@ function Index() {
         <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-28 md:grid-cols-12">
           <div className="md:col-span-5">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-tomato">/ The problem</p>
-            <h2 className="mt-6 font-display text-5xl font-black leading-[0.95] tracking-tight md:text-6xl">
+            <h2 className="reveal mt-6 font-display text-5xl font-black leading-[0.95] tracking-tight md:text-6xl">
               Untrusted input, right next to production credentials.
             </h2>
           </div>
@@ -195,7 +195,7 @@ function Index() {
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">/ How we secure them</p>
           <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
             {principles.map(([n, t, d]) => (
-              <div key={n} className="group bg-paper p-8 transition-colors hover:bg-sonic hover:text-paper">
+              <div key={n} className="reveal group bg-paper p-8 transition-colors hover:bg-sonic hover:text-paper">
                 <p className="font-mono text-sm text-tomato">{n}</p>
                 <h3 className="mt-6 text-2xl font-extrabold leading-tight tracking-tight">{t}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground group-hover:text-sea">{d}</p>
