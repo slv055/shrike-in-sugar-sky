@@ -23,7 +23,7 @@ export const Route = createFileRoute("/")({
 });
 
 const posts = [
-  { tag: "Product", title: "Introducing Shrike: find the pipelines an outsider can attack", href: "#product" },
+  { tag: "Product", title: "Chelate Sec: Securing the Agentic CI/CD", href: "/blogs/shrike-launch" },
   { tag: "How", title: "Why our blocks are deterministic, never an AI", href: "#how" },
   { tag: "Product", title: "Titra: watch and stop CI agents at runtime", href: "#product" },
   { tag: "How", title: "Blocking the action, not the network", href: "#how" },
@@ -48,6 +48,23 @@ const principles = [
   ["05", "We adopt gently", "Every install starts watch-only. See what your agents do, then turn on blocking when you trust it."],
   ["06", "Open where it secures most", "The scanner is free and open so the whole ecosystem can check itself. We charge for scale."],
 ];
+
+function ChelateMark({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 120 120" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden className={className}>
+      <polygon points="60,10 95,25 110,60 95,95 60,110 25,95 10,60 25,25" strokeLinejoin="round" />
+      <line x1="60" y1="46" x2="60" y2="28" strokeDasharray="3 3" />
+      <line x1="74" y1="60" x2="92" y2="60" strokeDasharray="3 3" />
+      <line x1="60" y1="74" x2="60" y2="92" strokeDasharray="3 3" />
+      <line x1="46" y1="60" x2="28" y2="60" strokeDasharray="3 3" />
+      <text x="60" y="65" textAnchor="middle" fill="currentColor" stroke="none" fontSize="13" fontFamily="monospace" fontWeight="bold">Fe</text>
+      <text x="60" y="24" textAnchor="middle" fill="currentColor" stroke="none" fontSize="10" fontFamily="monospace">N</text>
+      <text x="100" y="64" textAnchor="middle" fill="currentColor" stroke="none" fontSize="10" fontFamily="monospace">N</text>
+      <text x="60" y="104" textAnchor="middle" fill="currentColor" stroke="none" fontSize="10" fontFamily="monospace">N</text>
+      <text x="20" y="64" textAnchor="middle" fill="currentColor" stroke="none" fontSize="10" fontFamily="monospace">N</text>
+    </svg>
+  );
+}
 
 function Index() {
   return (
@@ -95,6 +112,9 @@ function Index() {
             <p className="max-w-sm text-lg leading-snug text-sea md:col-span-4 md:row-start-1">
               You gave an AI agent the keys to your repo and a desk inside your pipeline. Nobody
               checks what it does all day. <span className="text-paper">We do.</span>
+              <span className="mt-4 block font-mono text-xs uppercase tracking-[0.25em] text-paper/80">
+                Like Snyk, but for agentic workflows.
+              </span>
             </p>
           </div>
         </div>
@@ -115,7 +135,7 @@ function Index() {
             ))}
           </div>
         </div>
-        <a href="#product" className="hidden shrink-0 border-l border-paper/20 px-5 py-4 uppercase tracking-widest hover:text-sea sm:block">
+        <a href="/blogs" className="hidden shrink-0 border-l border-paper/20 px-5 py-4 uppercase tracking-widest hover:text-sea sm:block">
           All blogs ↗
         </a>
       </div>
