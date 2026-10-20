@@ -143,6 +143,7 @@ function Index() {
       {/* Problem */}
       <section id="problem" className="relative bg-ink text-paper">
         <div className="halftone-fade pointer-events-none absolute inset-x-0 top-0 h-64 text-sonic" />
+        <ChelateMark className="pointer-events-none absolute bottom-10 right-8 hidden h-28 w-28 -rotate-6 text-sea opacity-15 lg:block" />
         <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-28 md:grid-cols-12">
           <div className="md:col-span-5">
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-tomato">/ The problem</p>
