@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import shrike from "@/assets/shrike-halftone.jpg";
 
 const ORG = "https://github.com/ChelateSec";
@@ -306,7 +306,23 @@ function Index() {
       <footer className="relative overflow-hidden bg-ink pt-16 text-sea">
         <ChelateMark className="pointer-events-none absolute -left-8 top-24 h-40 w-40 text-sea opacity-20" />
         <ChelateMark className="pointer-events-none absolute right-10 top-8 h-24 w-24 rotate-12 text-tomato opacity-25" />
-        <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs uppercase tracking-widest">
+        <div className="relative mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-paper/15 pb-6 font-mono text-xs uppercase tracking-widest">
+            <a href={REPO} className="text-paper hover:text-tomato">
+              Shrike ↗
+            </a>
+            <a href={ORG} className="text-paper hover:text-tomato">
+              GitHub org ↗
+            </a>
+            <Link to="/blogs" className="hover:text-tomato">
+              Blogs ↗
+            </Link>
+            <a href="https://www.chelate.tech/" className="hover:text-tomato">
+              Chelate.tech ↗
+            </a>
+          </div>
+        </div>
+        <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 pt-6 font-mono text-xs uppercase tracking-widest">
           <span className="flex items-center gap-2 text-paper">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </span>
