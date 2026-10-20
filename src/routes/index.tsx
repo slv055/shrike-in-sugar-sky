@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import shrike from "@/assets/shrike-halftone.jpg";
 
+const ORG = "https://github.com/ChelateSec";
+const REPO = "https://github.com/ChelateSec/shrike";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -80,8 +83,10 @@ function Index() {
             <a href="#problem" className="opacity-80 hover:opacity-100">Problem</a>
             <a href="#product" className="opacity-80 hover:opacity-100">Product</a>
             <a href="#how" className="opacity-80 hover:opacity-100">How</a>
+            <a href="/blogs" className="opacity-80 hover:opacity-100">Blogs</a>
+            <a href={ORG} className="opacity-80 hover:opacity-100">GitHub</a>
           </div>
-          <a href="#product" className="rounded-sm bg-tomato px-4 py-2 font-mono text-xs uppercase tracking-widest text-primary-foreground hover:opacity-90">
+          <a href={REPO} className="rounded-sm bg-tomato px-4 py-2 font-mono text-xs uppercase tracking-widest text-primary-foreground hover:opacity-90">
             Run Shrike
           </a>
         </nav>
@@ -189,6 +194,14 @@ function Index() {
               <span className="text-tomato">$</span> curl -fsSL https://chelate.tech/install.sh | bash{"\n"}
               <span className="text-tomato">$</span> shrike scan --github-org your-org
             </pre>
+            <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-widest">
+              <a href={REPO} className="text-sea underline underline-offset-4 hover:text-paper">
+                Shrike on GitHub ↗
+              </a>
+              <a href={ORG} className="text-sea underline underline-offset-4 hover:text-paper">
+                ChelateSec org ↗
+              </a>
+            </div>
           </article>
           <article className="relative overflow-hidden bg-paper p-10">
             <div className="halftone pointer-events-none absolute -bottom-10 -right-10 h-56 w-56 rounded-full text-tomato opacity-40" />
@@ -272,12 +285,16 @@ function Index() {
         <div className="halftone pointer-events-none absolute inset-y-0 right-0 w-1/2 text-ink opacity-20" />
         <div className="relative mx-auto max-w-7xl px-6 py-28">
           <h2 className="max-w-4xl font-display text-[clamp(2.5rem,6vw,5.5rem)] font-black leading-[0.9] tracking-tighter">
-            Your pipeline runs a robot with your credentials.
+            Secure your{" "}
+            <span className="text-ink">agentic</span> pipeline.
           </h2>
           <p className="mt-6 max-w-xl text-xl">We make sure it only does its job.</p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href="https://github.com/ChelateSec/shrike" className="rounded-sm bg-ink px-6 py-3 font-mono text-sm uppercase tracking-widest text-paper hover:opacity-90">
+            <a href={REPO} className="rounded-sm bg-ink px-6 py-3 font-mono text-sm uppercase tracking-widest text-paper hover:opacity-90">
               Scan with Shrike
+            </a>
+            <a href={ORG} className="rounded-sm border border-ink px-6 py-3 font-mono text-sm uppercase tracking-widest hover:bg-ink hover:text-paper">
+              GitHub org
             </a>
             <a href="https://www.chelate.tech/" className="rounded-sm border border-ink px-6 py-3 font-mono text-sm uppercase tracking-widest hover:bg-ink hover:text-paper">
               Talk to us
