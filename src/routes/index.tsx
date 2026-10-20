@@ -271,7 +271,7 @@ function Index() {
           </span>
           <span>© 2026 Chelate · Securing the agentic CI/CD</span>
         </div>
-        <p className="reveal mt-10 select-none whitespace-nowrap text-center font-display text-[17vw] font-black leading-[0.8] tracking-tighter text-paper">
+        <p className="reveal mt-10 select-none whitespace-nowrap text-center font-display text-[16vw] font-black leading-[0.85] pb-6 tracking-tighter text-paper">
           Chelate<span className="text-tomato">Sec</span>
         </p>
       </footer>
