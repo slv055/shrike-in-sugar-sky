@@ -22,6 +22,24 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+const posts = [
+  { tag: "Product", title: "Introducing Shrike: find the pipelines an outsider can attack", href: "#product" },
+  { tag: "How", title: "Why our blocks are deterministic, never an AI", href: "#how" },
+  { tag: "Product", title: "Titra: watch and stop CI agents at runtime", href: "#product" },
+  { tag: "How", title: "Blocking the action, not the network", href: "#how" },
+];
+
+const expertise = [
+  ["Microsoft HoF", "Recognized for responsibly disclosing critical vulnerabilities in Microsoft's cloud & identity infrastructure"],
+  ["GitHub Security", "Listed in GitHub's Security Hall of Fame for responsible disclosure in core platform features"],
+  ["OWASP Standards", "All assessments follow OWASP Testing Guide v4.2 and Top 10 methodology across every engagement"],
+  ["CREST Certified", "Internationally recognised penetration testing standards, ethics, and professional conduct"],
+  ["CVE Programme", "Active CVE contributors — we find, report, and help patch real vulnerabilities in widely-used software"],
+  ["Bug Bounty Elite", "Top-ranked researchers across HackerOne, Bugcrowd and Intigriti with critical-severity findings"],
+  ["Open Source Trust", "Trusted by maintainers of widely-used npm, PyPI, and Go packages to audit before major releases"],
+  ["OpenSSF Supply Chain SIG", "Contributing members of the Open Source Security Foundation's Supply Chain Security working group"],
+];
+
 const principles = [
   ["01", "We ask the attacker's question", "Can someone with no access reach a secret or a write token — and how? That one question turns a pile of findings into the few paths that matter."],
   ["02", "We watch at runtime", "Titra sits in the running pipeline and sees every command, push and tool call. Finally, a record of what ran."],
@@ -82,13 +100,24 @@ function Index() {
         </div>
       </section>
 
-      {/* Ticker */}
-      <div className="overflow-hidden border-y border-ink bg-tomato py-3 font-mono text-xs uppercase tracking-[0.3em] text-primary-foreground">
-        <div className="flex gap-12 whitespace-nowrap">
-          {Array.from({ length: 4 }).map((_, i) => (
-            <span key={i}>Claude Code · Codex · Gemini · GitHub Actions · One poisoned comment · Write token · Publish keys ·</span>
-          ))}
+      {/* Blog strip */}
+      <div className="flex items-stretch border-y border-ink bg-ink font-mono text-xs text-paper">
+        <span className="shrink-0 border-r border-paper/20 px-5 py-4 uppercase tracking-widest text-sea">
+          Latest / Blogs
+        </span>
+        <div className="relative flex-1 overflow-hidden">
+          <div className="marquee flex w-max gap-12 py-4">
+            {[...posts, ...posts].map((p, i) => (
+              <a key={i} href={p.href} className="flex items-center gap-3 whitespace-nowrap hover:text-sea">
+                <span className="uppercase tracking-widest text-tomato">{p.tag}</span>
+                {p.title} <span aria-hidden>↗</span>
+              </a>
+            ))}
+          </div>
         </div>
+        <a href="#product" className="hidden shrink-0 border-l border-paper/20 px-5 py-4 uppercase tracking-widest hover:text-sea sm:block">
+          All blogs ↗
+        </a>
       </div>
 
       {/* Problem */}
@@ -101,7 +130,8 @@ function Index() {
               Untrusted input, right next to production credentials.
             </h2>
           </div>
-          <div className="space-y-6 text-lg leading-relaxed text-sea md:col-span-6 md:col-start-7">
+          <div className="reveal relative space-y-6 rounded-sm border border-sea/30 bg-sonic/15 p-8 text-lg leading-relaxed text-sea md:col-span-6 md:col-start-7">
+            <span className="absolute -top-3 left-6 bg-ink px-2 font-mono text-[10px] uppercase tracking-[0.3em] text-tomato">incident.log</span>
             <p>
               A stranger opens an issue, a PR, or a comment — and a workflow runs holding the
               repo's write token, publishing keys, and cloud secrets.
@@ -175,6 +205,46 @@ function Index() {
         </div>
       </section>
 
+      {/* Expertise */}
+      <section className="border-y border-border bg-muted">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sonic">
+            Backed by expertise — researchers, advisors &amp; allies
+          </p>
+          <div className="mt-10 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {expertise.map(([t, d], i) => (
+              <div key={t} className="reveal" style={{ animationDelay: `${i * 60}ms` }}>
+                <h3 className="text-lg font-extrabold tracking-tight">{t}</h3>
+                <p className="mt-3 font-mono text-[13px] leading-relaxed text-muted-foreground">{d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Founder */}
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-tomato">/ Founder</p>
+        <div className="mt-8 grid gap-10 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <h2 className="font-display text-4xl font-black tracking-tight">S. Lakshmi Vignesh</h2>
+            <p className="mt-3 font-mono text-sm text-muted-foreground">Security engineer &amp; researcher</p>
+          </div>
+          <div className="grid grid-cols-2 gap-6 md:col-span-7 md:grid-cols-4">
+            {[["60+", "vulnerabilities"], ["12", "CVEs credited"], ["MVR", "Microsoft 2025"], ["#1", "Intel Q1 2026"]].map(([n, l]) => (
+              <div key={l} className="border-t-2 border-sonic pt-3">
+                <p className="font-display text-3xl font-black text-sonic">{n}</p>
+                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">{l}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <p className="mt-10 font-mono text-xs uppercase tracking-widest text-muted-foreground">
+          Microsoft · Google · OpenAI · Meta · NVIDIA · Intel · PayPal · Coinbase · Mozilla
+        </p>
+      </section>
+
+
       {/* CTA */}
       <section className="grain relative overflow-hidden bg-tomato text-primary-foreground">
         <div className="halftone pointer-events-none absolute inset-y-0 right-0 w-1/2 text-ink opacity-20" />
@@ -194,13 +264,16 @@ function Index() {
         </div>
       </section>
 
-      <footer className="bg-ink py-10 text-sea">
+      <footer className="overflow-hidden bg-ink pt-16 text-sea">
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs uppercase tracking-widest">
           <span className="flex items-center gap-2 text-paper">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </span>
           <span>© 2026 Chelate · Securing the agentic CI/CD</span>
         </div>
+        <p className="reveal mt-10 select-none whitespace-nowrap text-center font-display text-[17vw] font-black leading-[0.8] tracking-tighter text-paper">
+          Chelate<span className="text-tomato">Sec</span>
+        </p>
       </footer>
     </div>
   );
