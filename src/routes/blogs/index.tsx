@@ -84,7 +84,20 @@ function Blogs() {
       </section>
 
       <footer className="bg-ink py-10 text-sea">
-        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 font-mono text-xs uppercase tracking-widest">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-paper/15 pb-6 font-mono text-xs uppercase tracking-widest">
+            <a href="https://github.com/ChelateSec/shrike" className="text-paper hover:text-tomato">
+              Shrike ↗
+            </a>
+            <a href="https://github.com/ChelateSec" className="text-paper hover:text-tomato">
+              GitHub org ↗
+            </a>
+            <a href="https://www.chelate.tech/" className="hover:text-tomato">
+              Chelate.tech ↗
+            </a>
+          </div>
+        </div>
+        <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 pt-6 font-mono text-xs uppercase tracking-widest">
           <Link to="/" className="flex items-center gap-2 text-paper">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </Link>
