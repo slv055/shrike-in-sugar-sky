@@ -287,27 +287,6 @@ function Index() {
         </div>
       </section>
 
-      {/* Founder */}
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <p className="font-mono text-xs uppercase tracking-[0.2em] text-tomato">/ Founder</p>
-        <div className="mt-8 grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-5">
-            <h2 className="font-display text-4xl font-black tracking-tight">S. Lakshmi Vignesh</h2>
-            <p className="mt-3 font-mono text-sm text-muted-foreground">Security engineer &amp; researcher</p>
-          </div>
-          <div className="grid grid-cols-2 gap-6 md:col-span-7 md:grid-cols-4">
-            {[["60+", "vulnerabilities"], ["12", "CVEs credited"], ["MVR", "Microsoft 2025"], ["#1", "Intel Q1 2026"]].map(([n, l]) => (
-              <div key={l} className="border-t-2 border-sonic pt-3">
-                <p className="font-display text-3xl font-black text-sonic">{n}</p>
-                <p className="mt-1 font-mono text-xs uppercase tracking-widest text-muted-foreground">{l}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-        <p className="mt-10 font-mono text-xs uppercase tracking-widest text-muted-foreground">
-          Microsoft · Google · OpenAI · Meta · NVIDIA · Intel · PayPal · Coinbase · Mozilla
-        </p>
-      </section>
 
 
       {/* CTA */}
