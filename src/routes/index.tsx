@@ -233,7 +233,7 @@ function Index() {
       {/* Principles */}
       <section id="how" className="border-t border-border bg-sonic/40">
         <div className="mx-auto max-w-7xl px-6 py-28">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">/ How we secure them</p>
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-sea">/ How we secure them</p>
           <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
             {principles.map(([n, t, d]) => (
               <div key={n} className="reveal group bg-paper p-8 transition-colors hover:bg-sonic">
