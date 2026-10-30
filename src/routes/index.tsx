@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import shrike from "@/assets/shrike-halftone.jpg";
+import shrike from "@/assets/shrike-halftone-dark.png";
 
 const ORG = "https://github.com/ChelateSec";
 const REPO = "https://github.com/ChelateSec/shrike";
@@ -80,7 +80,7 @@ function Index() {
     <div className="min-h-screen bg-background font-sans text-foreground">
       {/* Nav */}
       <header className="absolute inset-x-0 top-0 z-20">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-paper">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-ink">
           <a href="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
             <span className="inline-block h-3 w-3 rounded-full bg-tomato" />
             chelate
@@ -99,7 +99,7 @@ function Index() {
       </header>
 
       {/* Hero */}
-      <section className="grain relative isolate overflow-hidden bg-sonic text-paper">
+      <section className="grain relative isolate overflow-hidden bg-sonic text-ink">
         <img
           src={shrike}
           alt="Halftone shrike perched on a branch"
@@ -122,8 +122,8 @@ function Index() {
             </h1>
             <p className="max-w-sm text-lg leading-snug text-sea md:col-span-4 md:row-start-1">
               You gave an AI agent the keys to your repo and a desk inside your pipeline. Nobody
-              checks what it does all day. <span className="text-paper">We do.</span>
-              <span className="mt-4 block font-mono text-xs uppercase tracking-[0.25em] text-paper/80">
+              checks what it does all day. <span className="text-ink">We do.</span>
+              <span className="mt-4 block font-mono text-xs uppercase tracking-[0.25em] text-ink/80">
                 Like Snyk, but for agentic workflows.
               </span>
             </p>
@@ -132,8 +132,8 @@ function Index() {
       </section>
 
       {/* Blog strip */}
-      <div className="flex items-stretch border-y border-ink bg-ink font-mono text-xs text-paper">
-        <span className="shrink-0 border-r border-paper/20 px-5 py-4 uppercase tracking-widest text-sea">
+      <div className="flex items-stretch border-y border-ink bg-sonic font-mono text-xs text-ink">
+        <span className="shrink-0 border-r border-ink/20 px-5 py-4 uppercase tracking-widest text-sea">
           Latest / Blogs
         </span>
         <div className="relative flex-1 overflow-hidden">
@@ -146,13 +146,13 @@ function Index() {
             ))}
           </div>
         </div>
-        <a href="/blogs" className="hidden shrink-0 border-l border-paper/20 px-5 py-4 uppercase tracking-widest hover:text-sea sm:block">
+        <a href="/blogs" className="hidden shrink-0 border-l border-ink/20 px-5 py-4 uppercase tracking-widest hover:text-sea sm:block">
           All blogs ↗
         </a>
       </div>
 
       {/* Problem */}
-      <section id="problem" className="relative bg-ink text-paper">
+      <section id="problem" className="relative bg-paper text-ink">
         <div className="halftone-fade pointer-events-none absolute inset-x-0 top-0 h-64 text-sonic" />
         <ChelateMark className="pointer-events-none absolute bottom-10 right-8 hidden h-28 w-28 -rotate-6 text-sea opacity-15 lg:block" />
         <div className="relative mx-auto grid max-w-7xl gap-16 px-6 py-28 md:grid-cols-12">
@@ -163,7 +163,7 @@ function Index() {
             </h2>
           </div>
           <div className="reveal relative space-y-6 rounded-sm border border-sea/30 bg-sonic/15 p-8 text-lg leading-relaxed text-sea md:col-span-6 md:col-start-7">
-            <span className="absolute -top-3 left-6 bg-ink px-2 font-mono text-[10px] uppercase tracking-[0.3em] text-tomato">incident.log</span>
+            <span className="absolute -top-3 left-6 bg-paper px-2 font-mono text-[10px] uppercase tracking-[0.3em] text-tomato">incident.log</span>
             <p>
               A stranger opens an issue, a PR, or a comment — and a workflow runs holding the
               repo's write token, publishing keys, and cloud secrets.
@@ -172,7 +172,7 @@ function Index() {
               Teams now drop agents into their pipelines to review PRs and fix issues. Agents
               that read whatever a stranger writes, and act with those same credentials.
             </p>
-            <p className="border-l-2 border-tomato pl-5 text-paper">
+            <p className="border-l-2 border-tomato pl-5 text-ink">
               One poisoned comment and the agent pushes bad code, approves a PR, or leaks a
               secret. And nobody sees it happen.
             </p>
@@ -182,12 +182,12 @@ function Index() {
 
       {/* Product */}
       <section id="product" className="mx-auto max-w-7xl px-6 py-28">
-        <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">/ The product</p>
+        <p className="font-mono text-xs uppercase tracking-[0.3em] text-sea">/ The product</p>
         <h2 className="mt-6 max-w-3xl font-display text-5xl font-black leading-[0.95] tracking-tight md:text-6xl">
           Two tools. One model of your pipeline.
         </h2>
         <div className="mt-16 grid gap-px overflow-hidden rounded-sm border border-ink bg-ink md:grid-cols-2">
-          <article className="relative overflow-hidden bg-sonic p-10 text-paper">
+          <article className="relative overflow-hidden bg-sonic p-10 text-ink">
             <div className="halftone pointer-events-none absolute -right-10 -top-10 h-56 w-56 rounded-full text-sea opacity-40" />
             <p className="font-mono text-xs uppercase tracking-[0.3em] text-sea">Free · Open source</p>
             <h3 className="mt-4 font-display text-6xl font-black tracking-tighter">Shrike</h3>
@@ -196,24 +196,24 @@ function Index() {
               A CLI and GitHub Action that scans your workflows and tells you which pipelines an
               outsider can attack — ranked by Severity, Triggerability and Impact. No noise.
             </p>
-            <pre className="mt-8 overflow-x-auto rounded-sm bg-ink p-4 font-mono text-sm text-sea">
+            <pre className="mt-8 overflow-x-auto rounded-sm bg-paper p-4 font-mono text-sm text-sea">
               <span className="text-tomato">$</span> curl -fsSL https://chelate.tech/install.sh | bash{"\n"}
               <span className="text-tomato">$</span> shrike scan --github-org your-org
             </pre>
             <div className="mt-6 flex flex-wrap gap-x-8 gap-y-2 font-mono text-xs uppercase tracking-widest">
-              <a href={REPO} className="text-sea underline underline-offset-4 hover:text-paper">
+              <a href={REPO} className="text-sea underline underline-offset-4 hover:text-ink">
                 Shrike on GitHub ↗
               </a>
-              <a href={ORG} className="text-sea underline underline-offset-4 hover:text-paper">
+              <a href={ORG} className="text-sea underline underline-offset-4 hover:text-ink">
                 ChelateSec org ↗
               </a>
             </div>
           </article>
-          <article className="relative overflow-hidden bg-paper p-10">
+          <article className="relative overflow-hidden bg-card p-10">
             <div className="halftone pointer-events-none absolute -bottom-10 -right-10 h-56 w-56 rounded-full text-tomato opacity-40" />
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">Enterprise</p>
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-sea">Enterprise</p>
             <h3 className="mt-4 font-display text-6xl font-black tracking-tighter">Titra</h3>
-            <p className="mt-3 inline-block rounded-sm border-2 border-sonic px-2.5 py-1 font-mono text-sm font-bold text-sonic">watch and stop it</p>
+            <p className="mt-3 inline-block rounded-sm bg-tomato px-2.5 py-1 font-mono text-sm font-bold text-primary-foreground">watch and stop it</p>
             <p className="mt-8 max-w-md text-lg leading-relaxed">
               Install the GitHub App, add one line to your workflow. Titra records every action
               your agent takes and blocks the dangerous ones — in real time.
@@ -231,12 +231,12 @@ function Index() {
       </section>
 
       {/* Principles */}
-      <section id="how" className="border-t border-border bg-sea/40">
+      <section id="how" className="border-t border-border bg-sonic/40">
         <div className="mx-auto max-w-7xl px-6 py-28">
-          <p className="font-mono text-xs uppercase tracking-[0.3em] text-sonic">/ How we secure them</p>
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-sea">/ How we secure them</p>
           <div className="mt-14 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
             {principles.map(([n, t, d]) => (
-              <div key={n} className="reveal group bg-paper p-8 transition-colors hover:bg-sonic hover:text-paper">
+              <div key={n} className="reveal group bg-paper p-8 transition-colors hover:bg-sonic">
                 <p className="font-mono text-sm text-tomato">{n}</p>
                 <h3 className="mt-6 text-2xl font-extrabold leading-tight tracking-tight">{t}</h3>
                 <p className="mt-4 leading-relaxed text-muted-foreground group-hover:text-sea">{d}</p>
@@ -249,7 +249,7 @@ function Index() {
       {/* Expertise */}
       <section className="border-y border-border bg-muted">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sonic">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sea">
             Backed by expertise — researchers, advisors &amp; allies
           </p>
           <div className="mt-10 grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
@@ -266,7 +266,7 @@ function Index() {
       {/* How we secure the open source */}
       <section className="border-b border-border bg-paper">
         <div className="mx-auto max-w-6xl px-6 py-20">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sonic">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-sea">
             / How we secure the open source
           </p>
           <div className="mt-10 grid gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
@@ -312,15 +312,15 @@ function Index() {
         </div>
       </section>
 
-      <footer className="relative overflow-hidden bg-ink pt-16 text-sea">
+      <footer className="relative overflow-hidden bg-paper pt-16 text-sea">
         <ChelateMark className="pointer-events-none absolute -left-8 top-24 h-40 w-40 text-sea opacity-20" />
         <ChelateMark className="pointer-events-none absolute right-10 top-8 h-24 w-24 rotate-12 text-tomato opacity-25" />
         <div className="relative mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-paper/15 pb-6 font-mono text-xs uppercase tracking-widest">
-            <a href={REPO} className="text-paper hover:text-tomato">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-ink/15 pb-6 font-mono text-xs uppercase tracking-widest">
+            <a href={REPO} className="text-ink hover:text-tomato">
               Shrike ↗
             </a>
-            <a href={ORG} className="text-paper hover:text-tomato">
+            <a href={ORG} className="text-ink hover:text-tomato">
               GitHub org ↗
             </a>
             <Link to="/blogs" className="hover:text-tomato">
@@ -332,12 +332,12 @@ function Index() {
           </div>
         </div>
         <div className="relative mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 pt-6 font-mono text-xs uppercase tracking-widest">
-          <span className="flex items-center gap-2 text-paper">
+          <span className="flex items-center gap-2 text-ink">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </span>
           <span>© 2026 Chelate · Securing the Agentic Workflows</span>
         </div>
-        <p className="reveal relative mt-10 select-none whitespace-nowrap text-center font-display text-[16vw] font-black leading-[0.85] pb-6 tracking-tighter text-paper">
+        <p className="reveal relative mt-10 select-none whitespace-nowrap text-center font-display text-[16vw] font-black leading-[0.85] pb-6 tracking-tighter text-ink">
           Chelate{" "}<span className="text-sea">Sec</span>
         </p>
       </footer>

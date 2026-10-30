@@ -36,8 +36,8 @@ const posts = [
 function Blogs() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      <header className="border-b border-ink bg-ink">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-paper">
+      <header className="border-b border-ink bg-paper">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-ink">
           <Link to="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
             <span className="inline-block h-3 w-3 rounded-full bg-tomato" />
             chelate
@@ -70,7 +70,7 @@ function Blogs() {
                 {p.date} · {p.read}
               </div>
               <div className="md:col-span-8">
-                <h2 className="font-display text-3xl font-black leading-tight tracking-tight group-hover:text-sonic md:text-4xl">
+                <h2 className="font-display text-3xl font-black leading-tight tracking-tight group-hover:text-tomato md:text-4xl">
                   {p.title}
                 </h2>
                 <p className="mt-3 max-w-2xl leading-relaxed text-muted-foreground">{p.excerpt}</p>
@@ -83,13 +83,13 @@ function Blogs() {
         </div>
       </section>
 
-      <footer className="bg-ink py-10 text-sea">
+      <footer className="bg-paper py-10 text-sea">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-paper/15 pb-6 font-mono text-xs uppercase tracking-widest">
-            <a href="https://github.com/ChelateSec/shrike" className="text-paper hover:text-tomato">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-ink/15 pb-6 font-mono text-xs uppercase tracking-widest">
+            <a href="https://github.com/ChelateSec/shrike" className="text-ink hover:text-tomato">
               Shrike ↗
             </a>
-            <a href="https://github.com/ChelateSec" className="text-paper hover:text-tomato">
+            <a href="https://github.com/ChelateSec" className="text-ink hover:text-tomato">
               GitHub org ↗
             </a>
             <a href="https://www.chelate.tech/" className="hover:text-tomato">
@@ -98,7 +98,7 @@ function Blogs() {
           </div>
         </div>
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 pt-6 font-mono text-xs uppercase tracking-widest">
-          <Link to="/" className="flex items-center gap-2 text-paper">
+          <Link to="/" className="flex items-center gap-2 text-ink">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </Link>
           <span>© 2026 Chelate · Securing the Agentic Workflows</span>

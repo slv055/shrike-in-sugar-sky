@@ -40,31 +40,31 @@
 
 :root {
   --radius: 0.25rem;
-  /* Brand: Cherry Tomato, Sea Angel, Super Sonic */
-  --tomato: oklch(0.63 0.2 29);
-  --sea: oklch(0.79 0.06 240);
-  --sonic: oklch(0.45 0.18 264);
-  --ink: oklch(0.17 0.03 264);
-  --paper: oklch(0.97 0.01 240);
+  /* Brand: near-black, electric blue, white — dark wireframe rebrand */
+  --tomato: oklch(0.51 0.27 267);
+  --sea: oklch(0.72 0.02 260);
+  --sonic: oklch(0.2 0.03 270);
+  --ink: oklch(0.97 0.005 260);
+  --paper: oklch(0.12 0.015 270);
 
   --background: var(--paper);
   --foreground: var(--ink);
-  --card: oklch(1 0 0);
+  --card: oklch(0.16 0.02 270);
   --card-foreground: var(--ink);
-  --popover: oklch(1 0 0);
+  --popover: oklch(0.16 0.02 270);
   --popover-foreground: var(--ink);
   --primary: var(--tomato);
   --primary-foreground: oklch(0.99 0 0);
   --secondary: var(--sea);
-  --secondary-foreground: var(--ink);
-  --muted: oklch(0.93 0.015 240);
-  --muted-foreground: oklch(0.45 0.03 260);
+  --secondary-foreground: var(--paper);
+  --muted: oklch(0.21 0.02 270);
+  --muted-foreground: oklch(0.68 0.02 260);
   --accent: var(--sonic);
   --accent-foreground: oklch(0.99 0 0);
   --destructive: var(--tomato);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.86 0.02 250);
-  --input: oklch(0.86 0.02 250);
+  --border: oklch(0.3 0.02 270);
+  --input: oklch(0.3 0.02 270);
   --ring: var(--sonic);
 }
 
