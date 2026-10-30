@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import shrike from "@/assets/shrike-halftone.jpg";
+import shrike from "@/assets/shrike-halftone-dark.png";
 
 const ORG = "https://github.com/ChelateSec";
 const REPO = "https://github.com/ChelateSec/shrike";
