@@ -33,7 +33,7 @@ function P({ children }: { children: React.ReactNode }) {
 
 function Code({ children }: { children: React.ReactNode }) {
   return (
-    <pre className="mt-6 overflow-x-auto rounded-sm bg-ink p-5 font-mono text-sm leading-relaxed text-sea">
+    <pre className="mt-6 overflow-x-auto rounded-sm bg-sonic p-5 font-mono text-sm leading-relaxed text-sea">
       {children}
     </pre>
   );
@@ -42,13 +42,13 @@ function Code({ children }: { children: React.ReactNode }) {
 function Post() {
   return (
     <div className="min-h-screen bg-background font-sans text-foreground">
-      <header className="border-b border-ink bg-ink">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-paper">
+      <header className="border-b border-ink bg-paper">
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 text-ink">
           <Link to="/" className="flex items-center gap-2 text-lg font-extrabold tracking-tight">
             <span className="inline-block h-3 w-3 rounded-full bg-tomato" />
             chelate
           </Link>
-          <Link to="/blogs" className="font-mono text-xs uppercase tracking-widest text-sea hover:text-paper">
+          <Link to="/blogs" className="font-mono text-xs uppercase tracking-widest text-sea hover:text-ink">
             ← All blogs
           </Link>
         </nav>
@@ -74,7 +74,7 @@ function Post() {
           Today Chelate Sec, as part of securing the agentic workflows, is launching{" "}
           <strong className="text-foreground">Shrike</strong> — our open-source scanner for agentic
           CI/CD. You can find it on GitHub at{" "}
-          <a href="https://github.com/ChelateSec/shrike" className="text-sonic underline underline-offset-4 hover:text-tomato">
+          <a href="https://github.com/ChelateSec/shrike" className="text-sea underline underline-offset-4 hover:text-tomato">
             ChelateSec/shrike
           </a>
           .
@@ -255,18 +255,18 @@ shrike scan --github-org your-org`}</Code>
           </a>
         </div>
 
-        <p className="mt-16 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.3em] text-sonic">
+        <p className="mt-16 border-t border-border pt-8 font-mono text-xs uppercase tracking-[0.3em] text-sea">
           Securing the agentic workflows.
         </p>
       </article>
 
-      <footer className="bg-ink py-10 text-sea">
+      <footer className="bg-paper py-10 text-sea">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-paper/15 pb-6 font-mono text-xs uppercase tracking-widest">
-            <a href="https://github.com/ChelateSec/shrike" className="text-paper hover:text-tomato">
+          <div className="flex flex-wrap gap-x-8 gap-y-2 border-b border-ink/15 pb-6 font-mono text-xs uppercase tracking-widest">
+            <a href="https://github.com/ChelateSec/shrike" className="text-ink hover:text-tomato">
               Shrike ↗
             </a>
-            <a href="https://github.com/ChelateSec" className="text-paper hover:text-tomato">
+            <a href="https://github.com/ChelateSec" className="text-ink hover:text-tomato">
               GitHub org ↗
             </a>
             <a href="https://www.chelate.tech/" className="hover:text-tomato">
@@ -275,7 +275,7 @@ shrike scan --github-org your-org`}</Code>
           </div>
         </div>
         <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 pt-6 font-mono text-xs uppercase tracking-widest">
-          <Link to="/" className="flex items-center gap-2 text-paper">
+          <Link to="/" className="flex items-center gap-2 text-ink">
             <span className="inline-block h-2.5 w-2.5 rounded-full bg-tomato" /> chelate
           </Link>
           <span>© 2026 Chelate · Securing the Agentic Workflows</span>
